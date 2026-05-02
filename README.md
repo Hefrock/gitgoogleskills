@@ -1,4 +1,11 @@
-# git googleskills
-This is a test repository for a git google skills GitHub project
-
-# Placeholder for useful Git commands quick references
+# Curated Useful Git commands quick references
+---
+## Push local code to GitHub
+```
+git init
+git add .
+git commit -m "Initial commit: AI-powered decision support app"
+git branch -M main
+git remote add origin https://github.com/Hefrock/the-tiebreaker.git
+git push -u origin main
+```
