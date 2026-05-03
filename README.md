@@ -1,5 +1,5 @@
-# Curated Useful Git commands quick references
----
+# Curated Git quick references
+
 ## Push local code to GitHub
 ```
 git init
