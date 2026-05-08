@@ -1,6 +1,6 @@
-# Curated Git quick references
+# 💡: Curated Git quick references
 
-## Push local code to GitHub
+## 📌 Push local code to GitHub
 ```
 git init                                                            # Initializes new Git repo
 git add .                                                           # Stages all new files in working directory
@@ -10,7 +10,7 @@ git remote add origin https://github.com/Hefrock/the-tiebreaker.git # Links loca
 git push -u origin main                                             # Upload local data to remote repo
 ```
 
-## Rebase Sync Routine
+## 🔀: Rebase Sync Routine
 - This is useful when collaborating and changes were made on the remote main. Since our local version is behind main, we can catch up using the follow commands. 
 ```
 git fetch origin                  # Downloads the latest branches and history from remote
@@ -20,7 +20,7 @@ git checkout feature/new-feature  # Returns to your working branch
 git rebase main                   # Integrates remote changes onto your branch
 ```
 
-## Pull remote repo into you local working directory
+## ❄️ Pull remote repo into you local working directory
 - This is a useful routine to pull remote working branch for testing
 ```
 cd ~/dotfiles                                          # Change to working directory
