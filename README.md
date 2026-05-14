@@ -26,4 +26,5 @@ git rebase main                   # Integrates remote changes onto your branch
 cd ~/dotfiles                                          # Change to working directory
 git pull origin claude/testing-branch                  # Pull remote branch into local working directory
 sudo nixos-rebuild switch --flake ~/dotfiles#laptop    # Nix code to build & switch
+# sudo nixos-rebuild test --flake ~/dotfiles#laptop    # Nix testing without building
 ```
