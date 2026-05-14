@@ -23,17 +23,18 @@ git rebase main                   # Integrates remote changes onto your branch
 ## ❄️ Pull remote repo and build into local working directory
 - This is a useful routine for iterative local build testing
 ```
-cd ~/dotfiles                                          # Change to working directory
-git pull origin claude/testing-branch                  # Pull remote branch into local working directory
-sudo nixos-rebuild switch --flake ~/dotfiles#laptop    # Nix code to build & switch
+cd ~/dotfiles                                               # Change to flake directory
+git pull origin claude/testing-branch                       # Pull remote branch into local working directory
+sudo nixos-rebuild switch --flake ~/dotfiles#laptop         # Nix code to build & switch
 ```
 
 ## 🧪 Test out remote repo before building
 - Can test in realtime without creating another NixOS generation. Does not persist on reboot!
 ``` 
-cd ~/dotfiles                                          # Change directory to working dir
-git fetch origin                                       # Touch remote repo branches
-git checkout claude/disable-trackpoint                 # Checkout the branch you want test locally
-sudo nixos-rebuild test --flake .#laptop               # Test before building. Less NixOS generations
-hyprctl reload                                         # Reload Hyprland ctrls 
+cd ~/dotfiles                                              # Go to the flake repo 
+git fetch origin                                           # pull remote refs into local repo; working tree untouched
+git checkout claude/antigravity-class-lockdown             # switch working tree to that branch (windowrules.nix now has the narrowed regex)
+sudo nixos-rebuild test --flake .#laptop                   # build/activate NixOS configuration NOW; not persisted across reboot
+hyprctl reload                                             # re-read hyprland.conf (HM repointed the symlink during activation)
+antigravity                                                # launch Antigravity IDE; Hyprland matches its class against the new rule on window-map
 ```
